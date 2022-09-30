@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         marginBottom: 10
     },
-    botonGrande:{
+    botonGrande: {
         width: 100,
         height: 100,
         backgroundColor: 'red',
@@ -22,5 +22,24 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontSize: 22,
         fontWeight: 'bold'
+    },
+    avatarContainer: {
+        alignItems: 'center',
+        marginTop: 10
+    },
+    avatar: {
+        width: 150,
+        height: 150
+    },
+    menuContainer: {
+        marginVertical: 30,
+        marginHorizontal: 30,
+        // alignItems: "center"
+    },
+    menuBoton: {
+        marginVertical: 10
+    },
+    menuTexto: {
+        fontSize: 20
     }
 }) 
