@@ -4,6 +4,7 @@ import { SettingsScreen } from '../screens/SettingsScreen';
 import React from 'react'
 import { useWindowDimensions, Text, View, Image, TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
+import { Tabs } from './Tabs';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,7 +21,7 @@ export const MenuLateral = () => {
             }}
             drawerContent={(props) => <MenuInterno {...props} />}
         >
-            <Drawer.Screen name="StarckNavigator" component={StarckNavigator} />
+            <Drawer.Screen name="Tabs" component={Tabs} />
             <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
         </Drawer.Navigator>
     );
@@ -47,7 +48,7 @@ const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
             <View style={styles.menuContainer}>
                 <TouchableOpacity
                     style={styles.menuBoton}
-                    onPress={() => navigation.navigate('StarckNavigator')}
+                    onPress={() => navigation.navigate('Tabs')}
 
                 >
                     <Text style={styles.menuTexto}>Navegación</Text>
