@@ -3,8 +3,10 @@ import { StarckNavigator } from './StackNavigator';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import React from 'react'
 import { useWindowDimensions, Text, View, Image, TouchableOpacity } from 'react-native';
-import { styles } from '../theme/appTheme';
+import { styles, colores } from '../theme/appTheme';
 import { Tabs } from './Tabs';
+
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -47,19 +49,34 @@ const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
 
             <View style={styles.menuContainer}>
                 <TouchableOpacity
-                    style={styles.menuBoton}
+                    style={{
+                        ...styles.menuBoton,
+                        flexDirection: 'row',
+
+                    }}
                     onPress={() => navigation.navigate('Tabs')}
 
                 >
-                    <Text style={styles.menuTexto}>Navegación</Text>
+
+                    <Icon name="airplane-outline" size={25} color={colores.primary} />
+
+
+                    <Text style={styles.menuTexto}> Navegación</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={styles.menuBoton}
+                    style={{
+                        ...styles.menuBoton,
+                        flexDirection: 'row',
+
+                    }}
                     onPress={() => navigation.navigate('SettingsScreen')}
 
                 >
-                    <Text style={styles.menuTexto}>Ajustes</Text>
+
+                    <Icon name="settings-outline" size={25} color={colores.primary} />
+
+                    <Text style={styles.menuTexto}> Ajustes</Text>
                 </TouchableOpacity>
             </View>
         </DrawerContentScrollView>

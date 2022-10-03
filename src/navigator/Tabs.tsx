@@ -1,6 +1,7 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Tab1Screen } from '../screens/Tab1Screen';
 import { Platform, Text } from 'react-native';
@@ -33,18 +34,19 @@ const TabsAndroid = () => {
                     let iconName: string = '';
                     switch (route.name) {
                         case 'Tab1Screen':
-                            iconName = 'T1'
+                            iconName = 'ellipsis-horizontal-circle-outline'
                             break;
+
                         case 'Tab2Screen':
-                            iconName = 'T2'
+                            iconName = 'earth-outline'
                             break;
+
                         case 'StackNavigator':
-                            iconName = 'ST'
+                            iconName = 'fast-food-outline'
                             break;
 
                     }
-
-                    return <Text style={{ color }}>{iconName}</Text>
+                    return <Icon name={iconName} size={20} color={color} />
                 }
 
             })}
@@ -65,7 +67,10 @@ const TabsIOS = () => {
                 backgroundColor: 'white'
             }}
 
+
             screenOptions={({ route }) => ({
+                headerShown: false,
+
                 tabBarActiveTintColor: colores.primary,
                 tabBarStyle: {
                     borderTopColor: colores.primary,
@@ -76,22 +81,22 @@ const TabsIOS = () => {
                     fontSize: 15
                 },
                 tabBarIcon: ({ color, focused, size }) => {
-
                     let iconName: string = '';
                     switch (route.name) {
                         case 'Tab1Screen':
-                            iconName = 'T1'
+                            iconName = 'ellipsis-horizontal-circle-outline'
                             break;
+
                         case 'Tab2Screen':
-                            iconName = 'T2'
+                            iconName = 'earth-outline'
                             break;
+
                         case 'StackNavigator':
-                            iconName = 'ST'
+                            iconName = 'fast-food-outline'
                             break;
 
                     }
-
-                    return <Text style={{ color }}>{iconName}</Text>
+                    return <Icon name={iconName} size={20} color={color} />
                 }
 
             })}

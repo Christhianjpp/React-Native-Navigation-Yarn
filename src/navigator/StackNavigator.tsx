@@ -9,7 +9,7 @@ export type RootStackParams = {
   Pagina1Screen: undefined,
   Pagina2Screen: undefined,
   Pagina3Screen: undefined,
-  PersonaScreen: {id: number, nombre: string },
+  PersonaScreen: { id: number, nombre: string },
 }
 
 
@@ -18,22 +18,22 @@ const Stack = createStackNavigator<RootStackParams>();
 export const StarckNavigator = () => {
   return (
     <Stack.Navigator
-        //initialRouteName='Pagina3Screen'
-        screenOptions={{
-          headerStyle:{
-            elevation: 0,
-            shadowColor: 'transparent'
-          },
-          cardStyle: {
-            backgroundColor: 'white'
-          }
-        }}
+      //initialRouteName='Pagina3Screen'
+      screenOptions={{
+        headerStyle: {
+          elevation: 0,
+          shadowColor: 'transparent'
+        },
+        cardStyle: {
+          backgroundColor: 'white'
+        }
+      }}
     >
 
-      <Stack.Screen name="Pagina1Screen" options={{ title:"Página 1"}} component={Pagina1Screen} />
-      <Stack.Screen name="PersonaScreen" options={{ title:"Persona"}} component={PersonaScreen} />
-      <Stack.Screen name="Pagina2Screen" options={{ title:"Página 2"}} component={Pagina2Screen} />
-      <Stack.Screen name="Pagina3Screen" options={{ title:"Página 3"}} component={Pagina3Screen} />
+      <Stack.Screen name="Pagina1Screen" options={{ title: "Página 1" }} component={Pagina1Screen} />
+      <Stack.Screen name="PersonaScreen" options={{ title: "Persona" }} component={PersonaScreen} />
+      <Stack.Screen name="Pagina2Screen" options={{ title: "Página 2" }} component={Pagina2Screen} />
+      <Stack.Screen name="Pagina3Screen" options={{ title: "Página 3" }} component={Pagina3Screen} />
     </Stack.Navigator>
   );
 }
